@@ -27,11 +27,19 @@ Requires Node.js 22 or later. No installation or third-party packages are needed
 
 These checks are implementation proposals for Tamid and Carlos to review. Automated results in the handoff are developer checks, separate from Carlos's eventual acceptance testing.
 
-## GitHub handoff
+## GitHub repository and checks
 
-Copy the **contents of this folder** to the repository root. The workflow expects `dist`, `tests` and `package.json` at that root. Enable Pages with the GitHub Actions source, then push `main`. The workflow tests before uploading and deploying. The local repository contains a preparation commit once initialized. No hosted repository, deployment or successful remote Actions run is claimed by this draft.
+Repository: https://github.com/EvelG-Dev/cis4526-pmp3-student-planner
 
-For evidence, link the approved story ID to the commit, workflow run, live Pages URL and actual acceptance results. The supplied workflow uses official GitHub actions but has not run remotely yet.
+The planner source and tests are uploaded. The Planner checks workflow runs on pushes and pull requests. A successful remote run was verified on November 18: https://github.com/EvelG-Dev/cis4526-pmp3-student-planner/actions/runs/44273286466
+
+Live demo: https://evelg-dev.github.io/cis4526-pmp3-student-planner/
+
+Successful Pages deployment verified November 18: https://github.com/EvelG-Dev/cis4526-pmp3-student-planner/actions/runs/44274600018
+
+The repository is public with Evel's explicit approval. Pages uses GitHub Actions and deploys `dist` after passing tests. The deployment guard prevents accidental publication if repository visibility later becomes private. Workflows run with Node.js 22 on Ubuntu 24.04 using the current setup-node action.
+
+For final evidence, link the reviewed story ID to the meaningful commit, successful run, live Pages URL and actual team acceptance results. Canonical story IDs and sprint acceptance still require team review. A successful CI run is evidence of automated tests, not a deployment or completed sprint.
 
 Workflow reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
