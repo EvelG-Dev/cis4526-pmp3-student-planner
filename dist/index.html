@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student deadline planner</title><link rel="stylesheet" href="style.css"></head>
+<body><header><a href="./" class="brand">Student planner</a><span>Assignment demo</span></header>
+<main><section class="intro"><p class="eyebrow">A little less to remember</p><h1>Your deadlines,<br>in one place.</h1><p>Add an assignment and see what’s coming up across your courses.</p></section>
+<div class="workspace"><section class="entry" aria-labelledby="add-title"><h2 id="add-title">Add an assignment</h2><p class="hint">All fields are required.</p><form id="assignment-form" novalidate>
+<label for="title">Assignment title</label><input id="title" name="title" maxlength="120" required placeholder="e.g. Project report" aria-describedby="title-error"><p class="error" id="title-error"></p>
+<label for="course">Course</label><input id="course" name="course" maxlength="60" required placeholder="e.g. CIS4526" aria-describedby="course-error"><p class="error" id="course-error"></p>
+<label for="due">Due date</label><input id="due" name="due" type="date" required aria-describedby="due-error"><p class="error" id="due-error"></p>
+<button type="submit">Add assignment <span aria-hidden="true">↗</span></button></form><p class="session-note">Saved in this browser on this device. Clearing browser data removes your list. Use the checkbox to mark work complete.</p></section>
+<section class="upcoming" aria-labelledby="upcoming-title"><div class="list-heading"><h2 id="upcoming-title">Your assignments</h2><span id="count">0 to do · 0 completed</span></div><p id="storage-warning" class="storage-warning" role="alert" hidden></p><p id="announcement" class="sr-only" role="status" aria-live="polite"></p><div id="empty"><span class="empty-icon" aria-hidden="true">✓</span><h3>Start with your next deadline</h3><p>Your assignments will appear here, ordered by due date.</p></div><ul id="assignments"></ul></section></div>
+</main><footer>Student deadline planner · CIS4526 group project prototype</footer><script type="module" src="app.mjs"></script></body></html>
